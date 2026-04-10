@@ -523,7 +523,7 @@ public class AddAssignmentPage {
     }
 
     public boolean isActivityInstructionsEditorDisplayed() {
-        return waitVisible(instructionsEditor).isDisplayed();
+        return waitVisible(editor).isDisplayed();
     }
     
  // ================= Browser ALERT HANDLER when we click on Tabs =================

@@ -229,57 +229,66 @@ public class AddParticipantTest extends BaseTest{
 	    }
 	    @Test(priority = 26)
 	    public void TC_26_verifyGenderMaleVisibleAndEnabled() {
-	    	Assert.assertTrue(participantPage.isGenderMaleDisplayed(), "Gender Male filed is not Displayed");
-	    	Assert.assertTrue(participantPage.isGenderMaleEnabled(), "Gender Male is disabled");
+	    	AddParticipantPage addParticipantPage = new AddParticipantPage(driver);
+	    	Assert.assertTrue(addParticipantPage.isGenderMaleDisplayed(), "Gender Male filed is not Displayed");
+	    	Assert.assertTrue(addParticipantPage.isGenderMaleEnabled(), "Gender Male is disabled");
 	    	System.out.println("TC_26 passed: Gender Male is visible and enabled");
 	    }
 	    @Test(priority = 27)
 	    public void TC_27_varifyGenderMaleIsSelected() {
-	    	participantPage.clickGenderMaleRadioButton();
-	    	Assert.assertTrue(participantPage.isGenderMaleSelected(), "Gender Male Is not Selected");
+	    	AddParticipantPage addParticipantPage = new AddParticipantPage(driver);
+	    	addParticipantPage.clickGenderMaleRadioButton();
+	    	Assert.assertTrue(addParticipantPage.isGenderMaleSelected(), "Gender Male Is not Selected");
 	    	System.out.println("TC_27 passed: Gender Male Is Selected");
 	    }
 	    @Test(priority = 28)
 	    public void TC_28_verifyGenderFemaleVisibleAndEnabled() {
-	    	Assert.assertTrue(participantPage.isGenderFemaleDisplayed(), "Gender Female filed is not Displayed");
-	    	Assert.assertTrue(participantPage.isGenderFemaleEnabled(), "Gender Female is disabled");
+	    	AddParticipantPage addParticipantPage = new AddParticipantPage(driver);
+	    	Assert.assertTrue(addParticipantPage.isGenderFemaleDisplayed(), "Gender Female filed is not Displayed");
+	    	Assert.assertTrue(addParticipantPage.isGenderFemaleEnabled(), "Gender Female is disabled");
 	    	System.out.println("TC_28 passed: Gender Female is visible and enabled");
 	    }
 	    @Test(priority = 29)
 	    public void TC_29_varifyGenderFemaleIsSelected() {
-	    	participantPage.clickGenderFemaleRadioButton();
-	    	Assert.assertTrue(participantPage.isGenderFemaleSelected(), "Gender Female Is not Selected");
+	    	AddParticipantPage addParticipantPage = new AddParticipantPage(driver);
+	    	addParticipantPage.clickGenderFemaleRadioButton();
+	    	Assert.assertTrue(addParticipantPage.isGenderFemaleSelected(), "Gender Female Is not Selected");
 	    	System.out.println("TC_29 passed: Gender Female Is Selected");
 	    }
 	    @Test(priority = 30)
 	    public void TC_30_verifyGenderOtherVisibleAndEnabled() {
-	    	Assert.assertTrue(participantPage.isGenderOtherDisplayed(), "Gender Other filed is not Displayed");
-	    	Assert.assertTrue(participantPage.isGenderOtherEnabled(), "Gender Other is disabled");
+	    	AddParticipantPage addParticipantPage = new AddParticipantPage(driver);
+	    	Assert.assertTrue(addParticipantPage.isGenderOtherDisplayed(), "Gender Other filed is not Displayed");
+	    	Assert.assertTrue(addParticipantPage.isGenderOtherEnabled(), "Gender Other is disabled");
 	    	System.out.println("TC_30 passed: Gender Other is visible and enabled");
 	    }
 	    @Test(priority = 31)
 	    public void TC_31_varifyGenderOtherIsSelected() {
-	    	participantPage.clickGenderOtherRadioButton();
-	    	Assert.assertTrue(participantPage.isGenderOtherSelected(), "Gender Other Is not Selected");
+	    	AddParticipantPage addParticipantPage = new AddParticipantPage(driver);
+	    	addParticipantPage.clickGenderOtherRadioButton();
+	    	Assert.assertTrue(addParticipantPage.isGenderOtherSelected(), "Gender Other Is not Selected");
 	    	System.out.println("TC_31 passed: Gender Other Is Selected");
 	    }
 	    @Test(priority = 32)
 	    public void TC_32_verifyCallNameFieldVisibleAndEnabled() {
-		 	Assert.assertTrue(participantPage.isCallNameDisplayed(), "Call Name filed is not Displayed");
-	        Assert.assertTrue(participantPage.isCallNameEnabled(), "Call Name field is disabled");
+	    	AddParticipantPage addParticipantPage = new AddParticipantPage(driver);
+		 	Assert.assertTrue(addParticipantPage.isCallNameDisplayed(), "Call Name filed is not Displayed");
+	        Assert.assertTrue(addParticipantPage.isCallNameEnabled(), "Call Name field is disabled");
 	        System.out.println("TC_32 passed: Call Name field is visible and enabled");
 	    }
 	 @Test(priority = 33)
 	    public void TC_33_verifyValidCallNameInputAccepted() {
-		 	participantPage.enterCallName("John");
-	        String actualValue = participantPage.getCallNameValue();
+		 AddParticipantPage addParticipantPage = new AddParticipantPage(driver);
+		 addParticipantPage.enterCallName("John");
+	        String actualValue = addParticipantPage.getCallNameValue();
 	        Assert.assertEquals(actualValue, "John", "Valid name not accepted");
 	        System.out.println("TC_33 passed: Valid input accepted and retained");
 	    }
 	 @Test(priority = 34)
 	    public void TC_34_verifyEmailFieldVisibleAndEnabled() {
-	        Assert.assertTrue(participantPage.isEmailVisible(), "Email field is not visible");
-	        Assert.assertTrue(participantPage.isEmailEnabled(), "Email field is not enabled");
+		 AddParticipantPage addParticipantPage = new AddParticipantPage(driver);
+	        Assert.assertTrue(addParticipantPage.isEmailVisible(), "Email field is not visible");
+	        Assert.assertTrue(addParticipantPage.isEmailEnabled(), "Email field is not enabled");
 	        System.out.println("TC_34 passed: Email field is visible and enabled");
 	    }
 
@@ -318,58 +327,69 @@ public class AddParticipantTest extends BaseTest{
 
 	    @Test(priority = 37)
 	    public void TC_37_verifyValidEmailAccepted() {
-	    	participantPage.enterEmail("john.doe@gmail.com");
+	    	AddParticipantPage addParticipantPage = new AddParticipantPage(driver);
+	    	addParticipantPage.enterEmail("john.doe@gmail.com");
 	        System.out.println("TC_37 passed: Valid email accepted");
 	    }
 	    @Test(priority = 11)
 		 public void TC_11_varifyAdditionalInformationFormDisplayed() {
-    		 Assert.assertTrue(participantPage.isAdditionalInformationDropdownDisplayed(), "AdditionalDropdown is not Displayed");
-			 participantPage.clickAdditionalInformationDropdown();			 			  									
+	    	AddParticipantPage addParticipantPage = new AddParticipantPage(driver);
+    		 Assert.assertTrue(addParticipantPage.isAdditionalInformationDropdownDisplayed(), "AdditionalDropdown is not Displayed");
+    		 addParticipantPage.clickAdditionalInformationDropdown();			 			  									
 		 }
 	    @Test(priority = 38)
 	    public void TC_38_varifyMobileNumberIsDisplayedAndEnabled() {
-	    	Assert.assertTrue(participantPage.isMobileNumberDisplayed(), "Mobile filed is not Displayed");
-	    	Assert.assertTrue(participantPage.isMobileNumberEnabled(), "Mobile Number is Disabled");
+	    	AddParticipantPage addParticipantPage = new AddParticipantPage(driver);
+	    	Assert.assertTrue(addParticipantPage.isMobileNumberDisplayed(), "Mobile filed is not Displayed");
+	    	Assert.assertTrue(addParticipantPage.isMobileNumberEnabled(), "Mobile Number is Disabled");
 	    }
 	    @Test(priority = 40)
 		public void TC_40_verifyNumberFieldRejectsAlphabets() {
-	    	participantPage.clickMobileNumberFiled("abc");
-			Assert.assertTrue(participantPage.getMobileNumberValue().isEmpty(), "Field should not accept alphabets");
+	    	AddParticipantPage addParticipantPage = new AddParticipantPage(driver);
+	    	addParticipantPage.clickMobileNumberFiled("abc");
+			Assert.assertTrue(addParticipantPage.getMobileNumberValue().isEmpty(), "Field should not accept alphabets");
 		}
 	    @Test(priority = 41)
 		public void TC_41_verifyNumberFieldRejectsSpecialCharacters() {
-	    	participantPage.clickMobileNumberFiled("@#$%");
-			Assert.assertTrue(participantPage.getMobileNumberValue().isEmpty(), "Field should not accept special characters");
+	    	AddParticipantPage addParticipantPage = new AddParticipantPage(driver);
+	    	addParticipantPage.clickMobileNumberFiled("@#$%");
+			Assert.assertTrue(addParticipantPage.getMobileNumberValue().isEmpty(), "Field should not accept special characters");
 		}
 	    @Test(priority = 42)
 		public void TC_42_verifyNumberFieldAcceptsValidValue() {
-	    	participantPage.clickMobileNumberFiled("25");
-			Assert.assertEquals(participantPage.getMobileNumberValue(), "25", "Valid number not accepted");
+	    	AddParticipantPage addParticipantPage = new AddParticipantPage(driver);
+	    	addParticipantPage.clickMobileNumberFiled("25");
+			Assert.assertEquals(addParticipantPage.getMobileNumberValue(), "25", "Valid number not accepted");
 		}
 	    @Test(priority = 43)
 	    public void TC_43_varifyEmployeeIdIsDisplayedandEnabled() {
-	    	Assert.assertTrue(participantPage.isEmployeeIdDisplayed(), "EmployeeId filed is not Displayed");
-	    	Assert.assertTrue(participantPage.isEmployeeIdEnabled(), "EmployeeId filed is not Enabled");
+	    	AddParticipantPage addParticipantPage = new AddParticipantPage(driver);
+	    	Assert.assertTrue(addParticipantPage.isEmployeeIdDisplayed(), "EmployeeId filed is not Displayed");
+	    	Assert.assertTrue(addParticipantPage.isEmployeeIdEnabled(), "EmployeeId filed is not Enabled");
 	    }
 	    @Test(priority = 44)
 	    public void TC_44_vairfyEmployeeIdFieldAcceptsValidValue() {
-	    	participantPage.clickEmployeeIdFiled("Mani@9908");
-	    	Assert.assertEquals(participantPage.getEmployeeIdvalue(), "Mani@9908", "Value not accepted");
+	    	AddParticipantPage addParticipantPage = new AddParticipantPage(driver);
+	    	addParticipantPage.clickEmployeeIdFiled("Mani@9908");
+	    	Assert.assertEquals(addParticipantPage.getEmployeeIdvalue(), "Mani@9908", "Value not accepted");
 	    }
 	    @Test(priority = 45)
 	    public void TC_45_varifyDesignationFiledDisplayedandEnabled() {
-	    	Assert.assertTrue(participantPage.isDesignationDisplayed(), "Designation filed is not Displayed");
-	    	Assert.assertTrue(participantPage.isDesignationEnabled(), "Designation filed is not Enabled");
+	    	AddParticipantPage addParticipantPage = new AddParticipantPage(driver);
+	    	Assert.assertTrue(addParticipantPage.isDesignationDisplayed(), "Designation filed is not Displayed");
+	    	Assert.assertTrue(addParticipantPage.isDesignationEnabled(), "Designation filed is not Enabled");
 	    }
 	    @Test(priority = 46)
 	    public void TC_46_varifyDesignationFieldAcceptsValidValue() {
-	    	participantPage.clickDesignationFiled("Tester");
-	    	Assert.assertEquals(participantPage.getDesignationValue(), "Tester", "Value Not accepted");
+	    	AddParticipantPage addParticipantPage = new AddParticipantPage(driver);
+	    	addParticipantPage.clickDesignationFiled("Tester");
+	    	Assert.assertEquals(addParticipantPage.getDesignationValue(), "Tester", "Value Not accepted");
 	    }
 	    @Test(priority = 47)
 	    public void TC_47_varifyDepartmentFieldDisplayedAndEnabled() {
-	    	 Assert.assertTrue(participantPage.isDepartmentDisplayed(), "Department filed is not Displayed");
-	    	 Assert.assertTrue(participantPage.isDepartmentEnabled(), "Department filed is not Enabled");
+	    	AddParticipantPage addParticipantPage = new AddParticipantPage(driver);
+	    	 Assert.assertTrue(addParticipantPage.isDepartmentDisplayed(), "Department filed is not Displayed");
+	    	 Assert.assertTrue(addParticipantPage.isDepartmentEnabled(), "Department filed is not Enabled");
 	    }
 	    @Test(priority = 26)
 	    public void TC_26_varifyDepartmentFiledAcceptsValidValue() {
