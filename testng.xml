@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Potentia Automation Suite" verbose="1">
+	<listeners>
+        <listener class-name="com.potentia.automation.listeners.ExcelReportListener"/>
+    </listeners>
+
+  <test name="VConnect Tests">
+    <classes>
+    <class name="com.potentia.automation.tests.LoginTest"/>
+    <class name="com.potentia.automation.tests.MyBatchesTest"/>
+    <class name="com.potentia.automation.tests.AddNewBatchTest"/>
+    <class name="com.potentia.automation.tests.AddCardSortOneLevelTest"/>
+    <class name="com.potentia.automation.tests.AddReferenceMaterialTest"/>
+    </classes>
+  </test>
+</suite>

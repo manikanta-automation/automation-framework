@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.potentia.automation.tests.AddAssignmentActTest">
+        <methods>
+          <include name="verifyXSSHandling"/>
+          <include name="verifyDescriptionHelpText"/>
+          <include name="TC_20_verifyAssignmentSelection"/>
+          <include name="TC_10_verifyAddActivityFlow"/>
+          <include name="verifyHelpTextForAllQuestions"/>
+          <include name="verifyHelpText"/>
+          <include name="TC_MB_clickBatchByNameAcrossTabs"/>
+          <include name="TC_15_verifyAssignmentSelection"/>
+          <include name="isAddAtleatOneQuestionErrormsgDisplayed"/>
+          <include name="verifyAllTagsDisplayedAndInserted"/>
+          <include name="verifyRadioButtonQuestionFlow"/>
+          <include name="TC_12_verifyAllActivities"/>
+          <include name="verifyEmojiSupport"/>
+          <include name="verifyModalClose"/>
+          <include name="verifyAutoQuestionNumberHelpText"/>
+          <include name="TC_14_verifyMultipleHover"/>
+          <include name="TC_034_verifyActivitiesPage"/>
+          <include name="verifyLargeInput"/>
+          <include name="TC_56_verifyCheckboxSelection"/>
+          <include name="TC_11_verifyMultipleClicks"/>
+          <include name="setUpSuite"/>
+          <include name="verifyModalDisplayed"/>
+          <include name="verifyClickingLabelTogglesCheckbox"/>
+          <include name="TC_07_verifyBreadcrumb"/>
+          <include name="TC_58_verifyLabelClickTogglesCheckbox"/>
+          <include name="TC_05_verifyTabActive"/>
+          <include name="TC_16_verifyActivityDetailsTabLoaded"/>
+          <include name="verifyCheckboxIsDisplayedAndSelectedByDefault"/>
+          <include name="verifyTagsDisplayed"/>
+          <include name="verifySpecialCharactersAccepted"/>
+          <include name="verifyInsertImage"/>
+          <include name="TC_06_verifyOnlyActivitiesActive"/>
+          <include name="pageSetup"/>
+          <include name="TC_55_verifyCheckboxDefaultState"/>
+          <include name="verifyAllQuestionTypesDisplayed"/>
+          <include name="verifyQNoVisibleWhenAutoDisabled"/>
+          <include name="verifyCheckboxToggle"/>
+          <include name="verifyMultilineInput"/>
+          <include name="TC_13_verifyTooltipNotNull"/>
+          <include name="TC_19_verifyOkNavigates"/>
+          <include name="verifyTextInput"/>
+          <include name="TC_SC_1_clickSuperClientByName"/>
+          <include name="verifyToolbarActions"/>
+          <include name="verifyinstructionSpecialCharacters"/>
+          <include name="verifyOnlySpacesShowsErrorToast"/>
+          <include name="verifySpecialCharacters"/>
+          <include name="verifyResizeFunctionality"/>
+          <include name="verifyActivityInstructionHelpText"/>
+          <include name="TC_09_verifyAddActivityEnabled"/>
+          <include name="verifyTitleExceeds150CharsShowsErrorToast"/>
+          <include name="verifyQNoHiddenWhenAutoEnabled"/>
+          <include name="verifyCollapseExpand"/>
+          <include name="TC_17_verifyTitleField"/>
+          <include name="TC_57_verifyCheckboxUnSelection"/>
+          <include name="verifyDescriptionInput"/>
+          <include name="TC_18_verifyAlertText"/>
+          <include name="verifyEmptyTitleShowsErrorToastclickOnSaveAndContinueAndSaveAndExit"/>
+          <include name="verifyinstructionMultilineInput"/>
+          <include name="tearDownSuite"/>
+          <include name="TC_08_verifyButtonsVisible"/>
+        </methods>
+      </class> <!-- com.potentia.automation.tests.AddAssignmentActTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
